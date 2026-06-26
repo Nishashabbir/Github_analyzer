@@ -1,0 +1,578 @@
+/* ===========================
+   Google Font
+=========================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+
+/* ===========================
+   Variables
+=========================== */
+
+:root{
+
+    --bg:#0f172a;
+    --card:#1e293b;
+    --card2:rgba(30,41,59,.75);
+
+    --primary:#8b5cf6;
+    --secondary:#3b82f6;
+
+    --text:#ffffff;
+    --text2:#cbd5e1;
+
+    --border:rgba(255,255,255,.08);
+
+}
+
+
+/* ===========================
+   Reset
+=========================== */
+
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Poppins",sans-serif;
+
+}
+
+body{
+
+    background:linear-gradient(
+        135deg,
+        #0f172a,
+        #111827,
+        #1e1b4b
+    );
+
+    color:white;
+
+    min-height:100vh;
+
+}
+
+
+/* ===========================
+   Navigation
+=========================== */
+
+nav{
+
+    padding:25px 8%;
+
+}
+
+.logo{
+
+    display:flex;
+    align-items:center;
+    gap:12px;
+
+}
+
+.logo i{
+
+    font-size:35px;
+    color:var(--primary);
+
+}
+
+.logo h2{
+
+    font-size:28px;
+
+}
+
+
+/* ===========================
+   Hero
+=========================== */
+
+.hero{
+
+    text-align:center;
+
+    margin-top:40px;
+
+}
+
+.hero h1{
+
+    font-size:50px;
+
+    margin-bottom:15px;
+
+}
+
+.hero p{
+
+    color:var(--text2);
+
+    margin-bottom:35px;
+
+}
+
+
+/* ===========================
+   Search Box
+=========================== */
+
+.search-box{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:15px;
+
+    flex-wrap:wrap;
+
+}
+
+.search-box input{
+
+    width:420px;
+
+    padding:18px;
+
+    border:none;
+
+    border-radius:14px;
+
+    background:var(--card);
+
+    color:white;
+
+    outline:none;
+
+    font-size:17px;
+
+}
+
+.search-box input::placeholder{
+
+    color:#94a3b8;
+
+}
+
+.search-box button{
+
+    padding:18px 28px;
+
+    border:none;
+
+    border-radius:14px;
+
+    cursor:pointer;
+
+    color:white;
+
+    font-size:17px;
+
+    background:linear-gradient(
+        45deg,
+        var(--primary),
+        var(--secondary)
+    );
+
+    transition:.3s;
+
+}
+
+.search-box button:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 12px 30px rgba(139,92,246,.4);
+
+}
+
+
+/* ===========================
+   Loader
+=========================== */
+
+#loader{
+
+    text-align:center;
+
+    margin:50px;
+
+}
+
+.spinner{
+
+    width:70px;
+
+    height:70px;
+
+    border:6px solid #2c3e50;
+
+    border-top:6px solid var(--primary);
+
+    border-radius:50%;
+
+    margin:auto;
+
+    animation:spin 1s linear infinite;
+
+}
+
+@keyframes spin{
+
+    to{
+
+        transform:rotate(360deg);
+
+    }
+
+}
+
+
+/* ===========================
+   Error Box
+=========================== */
+
+#errorBox{
+
+    margin:50px auto;
+
+    width:450px;
+
+    max-width:90%;
+
+    text-align:center;
+
+    padding:40px;
+
+    background:#7f1d1d;
+
+    border-radius:20px;
+
+}
+
+#errorBox i{
+
+    font-size:55px;
+
+    margin-bottom:15px;
+
+}
+
+
+/* ===========================
+   Profile Card
+=========================== */
+
+.profile-card{
+
+    width:90%;
+
+    max-width:1100px;
+
+    margin:50px auto;
+
+    background:var(--card2);
+
+    backdrop-filter:blur(15px);
+
+    border:1px solid var(--border);
+
+    border-radius:25px;
+
+    display:flex;
+
+    gap:45px;
+
+    padding:40px;
+
+    transition:.3s;
+
+}
+
+.profile-card:hover{
+
+    transform:translateY(-5px);
+
+}
+
+
+.profile-left{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+
+.profile-left img{
+
+    width:220px;
+
+    height:220px;
+
+    border-radius:50%;
+
+    border:5px solid var(--primary);
+
+}
+
+
+.profile-right{
+
+    flex:1;
+
+}
+
+
+.profile-right h2{
+
+    font-size:35px;
+
+}
+
+
+.profile-right h3{
+
+    color:#94a3b8;
+
+    margin-bottom:15px;
+
+}
+
+
+.profile-right p{
+
+    color:var(--text2);
+
+    line-height:1.8;
+
+}
+
+
+/* ===========================
+   Stats
+=========================== */
+
+.stats{
+
+    display:flex;
+
+    gap:25px;
+
+    margin:35px 0;
+
+    flex-wrap:wrap;
+
+}
+
+.stat{
+
+    flex:1;
+
+    min-width:140px;
+
+    text-align:center;
+
+    background:#111827;
+
+    padding:20px;
+
+    border-radius:15px;
+
+}
+
+.stat h2{
+
+    color:var(--primary);
+
+}
+
+.stat span{
+
+    color:#94a3b8;
+
+}
+
+
+/* ===========================
+   Extra Info
+=========================== */
+
+.extra-info{
+
+    margin:30px 0;
+
+}
+
+.extra-info p{
+
+    margin:12px 0;
+
+}
+
+.extra-info i{
+
+    color:var(--primary);
+
+    width:30px;
+
+}
+
+
+/* ===========================
+   Visit Button
+=========================== */
+
+#profileLink{
+
+    display:inline-block;
+
+    text-decoration:none;
+
+    color:white;
+
+    padding:16px 28px;
+
+    border-radius:12px;
+
+    background:linear-gradient(
+        45deg,
+        var(--primary),
+        var(--secondary)
+    );
+
+    transition:.3s;
+
+}
+
+#profileLink:hover{
+
+    transform:translateY(-3px);
+
+}
+
+
+/* ===========================
+   Repository Section
+=========================== */
+
+#repoSection{
+
+    width:90%;
+
+    max-width:1200px;
+
+    margin:60px auto;
+
+}
+
+#repoSection h2{
+
+    margin-bottom:30px;
+
+    font-size:35px;
+
+}
+
+#repoContainer{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(300px,1fr));
+
+    gap:25px;
+
+}
+
+
+/* Repository Card */
+
+.repo{
+
+    background:var(--card2);
+
+    border:1px solid var(--border);
+
+    border-radius:20px;
+
+    padding:25px;
+
+    transition:.3s;
+
+}
+
+.repo:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.repo h3{
+
+    margin-bottom:15px;
+
+}
+
+.repo p{
+
+    color:#94a3b8;
+
+    margin:12px 0;
+
+}
+
+.repo a{
+
+    color:#60a5fa;
+
+    text-decoration:none;
+
+}
+
+
+/* ===========================
+   Utility
+=========================== */
+
+.hidden{
+
+    display:none;
+
+}
+
+
+/* ===========================
+   Responsive
+=========================== */
+
+@media(max-width:850px){
+
+.profile-card{
+
+    flex-direction:column;
+
+    text-align:center;
+
+}
+
+.hero h1{
+
+    font-size:36px;
+
+}
+
+.search-box input{
+
+    width:90%;
+
+}
+
+}

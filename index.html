@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>GitHub Explorer Pro</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+    <!-- ========================= -->
+    <!-- Navigation -->
+    <!-- ========================= -->
+
+    <nav>
+
+        <div class="logo">
+
+            <i class="fa-brands fa-github"></i>
+
+            <h2>GitHub Explorer</h2>
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- ========================= -->
+    <!-- Hero -->
+    <!-- ========================= -->
+
+    <section class="hero">
+
+        <h1>
+            Search Any GitHub Developer
+        </h1>
+
+        <p>
+            Explore GitHub profiles, repositories, followers and much more.
+        </p>
+
+
+
+        <!-- Search Box -->
+
+        <div class="search-box">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Enter GitHub Username...">
+
+            <button id="searchBtn">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+                Search
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ========================= -->
+    <!-- Loading Spinner -->
+    <!-- ========================= -->
+
+    <div id="loader" class="hidden">
+
+        <div class="spinner"></div>
+
+        <p>Searching GitHub...</p>
+
+    </div>
+
+
+
+    <!-- ========================= -->
+    <!-- Error Box -->
+    <!-- ========================= -->
+
+    <div id="errorBox" class="hidden">
+
+        <i class="fa-solid fa-circle-exclamation"></i>
+
+        <h2>User Not Found</h2>
+
+        <p>Please enter a valid GitHub username.</p>
+
+    </div>
+
+
+
+
+    <!-- ========================= -->
+    <!-- Profile Card -->
+    <!-- ========================= -->
+
+    <section id="profileContainer" class="hidden">
+
+        <div class="profile-card">
+
+            <div class="profile-left">
+
+                <img
+                    id="avatar"
+                    src=""
+                    alt="Avatar">
+
+            </div>
+
+
+
+            <div class="profile-right">
+
+                <h2 id="name"></h2>
+
+                <h3 id="username"></h3>
+
+                <p id="bio"></p>
+
+
+
+                <div class="stats">
+
+                    <div class="stat">
+
+                        <h2 id="repos">0</h2>
+
+                        <span>Repositories</span>
+
+                    </div>
+
+                    <div class="stat">
+
+                        <h2 id="followers">0</h2>
+
+                        <span>Followers</span>
+
+                    </div>
+
+                    <div class="stat">
+
+                        <h2 id="following">0</h2>
+
+                        <span>Following</span>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="extra-info">
+
+                    <p>
+
+                        <i class="fa-solid fa-location-dot"></i>
+
+                        <span id="location"></span>
+
+                    </p>
+
+                    <p>
+
+                        <i class="fa-solid fa-building"></i>
+
+                        <span id="company"></span>
+
+                    </p>
+
+                    <p>
+
+                        <i class="fa-solid fa-link"></i>
+
+                        <span id="website"></span>
+
+                    </p>
+
+                </div>
+
+
+
+                <a
+                    id="profileLink"
+                    target="_blank">
+
+                    Visit GitHub Profile
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+
+
+    <!-- ========================= -->
+    <!-- Repository Section -->
+    <!-- ========================= -->
+
+    <section id="repoSection" class="hidden">
+
+        <h2>
+
+            Public Repositories
+
+        </h2>
+
+        <div id="repoContainer">
+
+        </div>
+
+    </section>
+
+
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
